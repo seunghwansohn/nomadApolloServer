@@ -14,10 +14,14 @@
 
 //라는 아주 간단한 응답을 하는 api 상태
 
-
+const nicolas = {
+  name : "Nicolas",
+  age : 18,
+  gender : "female"
+}
 const resolvers = {
   Query: {
-    name: () => "nicolas"
+    person: () => nicolas
   }
 }
 
