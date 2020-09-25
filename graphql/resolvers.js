@@ -56,6 +56,11 @@ const resolvers = {
       const newPerson = {id, name, age, gender}
       people.push(newPerson)
       return newPerson
+    },
+    deletePerson: (_, {id}) => {
+      const filteredPeople = people.filter(person => person.id !== id)
+      people = filteredPeople
+      return people
     }
 
   }
